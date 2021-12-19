@@ -1,11 +1,11 @@
 import React from "react";
-import { HelloWorld } from "my-module";
+import Trap from "components/trap";
 
 const App = (): React.ReactElement => {
   return (
     <div>
       App을 시작해볼까?
-      <HelloWorld />
+      <Trap />
     </div>
   );
 };
