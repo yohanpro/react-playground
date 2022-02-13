@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
+    "@emotion/css": "^11.7.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -40,8 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "craco-alias": "^3.0.1"
   }
 }

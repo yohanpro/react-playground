@@ -5,7 +5,9 @@
     "bootstrap": "lerna bootstrap --hoist",
     "start": "lerna run start --stream",
     "tsc": "lerna run tsc --stream",
-    "watch": "lerna run watch --stream"
+    "watch": "lerna run watch --stream",
+    "dev:blog": "lerna exec --scope=blog npm run start",
+    "dev:notion": "lerna exec --scope=notion npm run start"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
@@ -14,6 +16,7 @@
     "@types/react-dom": "^16.8.3",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
+    "craco-alias": "^3.0.1",
     "eslint": "^8.5.0",
     "eslint-config-airbnb": "^19.0.2",
     "eslint-plugin-import": "^2.25.3",
@@ -25,7 +28,7 @@
     "typescript": "^3.4.1"
   },
   "dependencies": {
-    "my-module": "file:packages/my-module",
-    "notion-clone": "file:packages/notion-clone"
+    "blog": "file:packages/blog",
+    "notion": "file:packages/notion-clone"
   }
 }

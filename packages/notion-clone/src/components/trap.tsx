@@ -1,7 +1,7 @@
-import * as React from "react";
+import React, { ReactElement } from "react";
 import styled from "@emotion/styled";
 
-const Trap = () => {
+const Trap = (): ReactElement => {
   return (
     <TrapContainer>
       <h1>Trap</h1>
