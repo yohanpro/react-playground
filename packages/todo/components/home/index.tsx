@@ -1,7 +1,12 @@
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
+import Album from "@components/Album";
 
 const Home = () => {
-  return <HomeContainer>This is Home</HomeContainer>;
+  return (
+    <HomeContainer>
+      <Album />
+    </HomeContainer>
+  );
 };
 
 const HomeContainer = styled.div`
