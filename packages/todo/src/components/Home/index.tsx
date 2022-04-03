@@ -1,5 +1,5 @@
-import styled from "@emotion/styled/macro";
-import Album from "@components/Album";
+import styled from "@emotion/styled";
+import Album from "src/components/Album";
 
 const Home = () => {
   return (

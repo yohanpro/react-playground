@@ -21,8 +21,11 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": [
-        "./components/*"
-      ]
+        "src/components/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
     },
   },
   "include": [
