@@ -28,7 +28,6 @@
     "typescript": "^3.4.1"
   },
   "dependencies": {
-    "blog": "file:packages/blog",
     "notion": "file:packages/notion-clone"
   }
 }
