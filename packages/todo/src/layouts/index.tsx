@@ -4,16 +4,16 @@ import { ReactChild } from "react";
 
 const DefaultLayout = ({ children }: { children: ReactChild }) => {
   return (
-    <Container>
+    <Layout>
       <Head>
         <title>앨범 </title>
       </Head>
       <main>{children}</main>
-    </Container>
+    </Layout>
   );
 };
 
-const Container = styled.div`
+const Layout = styled.div`
   min-width: 100vw;
   min-height: 100vh;
   background-color: #f5f5f5;

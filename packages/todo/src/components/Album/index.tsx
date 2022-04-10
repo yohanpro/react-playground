@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
-import AlbumEntity from "./AlbumEntity.tsx";
+import AlbumEntity from "./AlbumEntity";
 import { MockAlbum } from "./mock";
 
 const Album = () => {
+  const album = MockAlbum;
   return (
     <Container>
-      {MockAlbum.map((album) => {
+      {album.map((album) => {
         return <AlbumEntity key={album.id} {...album} />;
       })}
     </Container>

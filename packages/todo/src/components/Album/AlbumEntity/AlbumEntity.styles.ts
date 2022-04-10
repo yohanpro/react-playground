@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Props } from './index';
+import { AlbumEntityPropType } from './AlbumEntity.propType';
 
 const Entity = styled.div`
   width: calc(50% - 1rem);
@@ -10,7 +10,7 @@ const Entity = styled.div`
   border: 1px solid #ccc;
   border-radius: 10px;
   padding-top: 1rem;
-  background: ${({ image }: Props) => `url(${image})`};
+  background: ${({ image }: AlbumEntityPropType) => `url(${image})`};
   background-repeat: no-repeat;
   background-size: 100%;
   font-size: 1.25rem;
