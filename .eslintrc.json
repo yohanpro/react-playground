@@ -24,6 +24,13 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "react/jsx-props-no-spreading": 0,
+        "react/jsx-filename-extension": 0,
+        "no-use-before-define": 0,
+        "import/no-unresolved": 0,
+        "react/function-component-definition": 0,
+        "arrow-body-style": 0,
+        "semi": 0,
         "import/extensions": [
             "error",
             "ignorePackages",
