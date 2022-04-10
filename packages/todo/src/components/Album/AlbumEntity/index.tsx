@@ -1,13 +1,13 @@
-import Entity from "./AlbumEntity.styles";
-import { AlbumEntityPropType } from "./AlbumEntity.propType";
+import Entity from './AlbumEntity.styles'
+import { AlbumEntityPropType } from './AlbumEntity.propType'
 
 const AlbumEntity = (props: AlbumEntityPropType) => {
-  const { name } = props;
+  const { name } = props
   return (
     <Entity role="button" {...props}>
       <div>{name}</div>
     </Entity>
-  );
-};
+  )
+}
 
-export default AlbumEntity;
+export default AlbumEntity

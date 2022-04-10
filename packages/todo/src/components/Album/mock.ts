@@ -1,4 +1,4 @@
-const randomNum = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+const randomNum = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
 
 const albumRandomNum = () => randomNum(1, 500);
 const randomColor = () => {

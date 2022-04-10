@@ -1,17 +1,16 @@
-import styled from "@emotion/styled";
-import AlbumEntity from "./AlbumEntity";
-import { MockAlbum } from "./mock";
+import styled from '@emotion/styled'
+import AlbumEntity from './AlbumEntity'
+import { MockAlbum } from './mock'
 
 const Album = () => {
-  const album = MockAlbum;
   return (
     <Container>
-      {album.map((album) => {
-        return <AlbumEntity key={album.id} {...album} />;
+      {MockAlbum.map((album) => {
+        return <AlbumEntity key={album.id} {...album} />
       })}
     </Container>
-  );
-};
+  )
+}
 
 const Container = styled.div`
   width: 100%;
@@ -25,5 +24,5 @@ const Container = styled.div`
   @media (min-width: 768px) {
     gap: 1em;
   }
-`;
-export default Album;
+`
+export default Album
