@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import { AlbumEntityPropType } from './AlbumEntity.propType';
+import styled from '@emotion/styled'
+import { AlbumEntityPropType } from './AlbumEntity.propType'
 
 const Entity = styled.div`
   width: calc(50% - 1rem);
@@ -7,14 +7,16 @@ const Entity = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding-top: 1rem;
+  padding: 2rem;
   background: ${({ image }: AlbumEntityPropType) => `url(${image})`};
   background-repeat: no-repeat;
   background-size: 100%;
   font-size: 1.25rem;
   font-weight: bold;
+  position: relative;
   @media (min-width: 768px) {
     height: 30vh;
   }
@@ -22,6 +24,14 @@ const Entity = styled.div`
     transform: scale(1.01);
     border: 1px solid pink;
   }
-`;
 
-export default Entity;
+  & > .button-container {
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    display: flex;
+
+  }
+`
+
+export default Entity
