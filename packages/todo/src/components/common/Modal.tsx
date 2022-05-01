@@ -1,15 +1,17 @@
 import styled from '@emotion/styled'
-import { ReactChild } from 'react'
+import { ReactChild, useState } from 'react'
 
 interface ModalProps {
   title: string
   children: ReactChild
   onClose: () => void
+  onConfirm: () => void
   isOpen: boolean
 }
 
 const BaseModal = (props: ModalProps) => {
-  const { title, children, onClose, isOpen } = props
+  const { title, children, onClose, isOpen, onConfirm } = props
+
   return (
     <ModalContainer isOpen={isOpen}>
       <ModalContent>
@@ -20,6 +22,10 @@ const BaseModal = (props: ModalProps) => {
           </button>
         </ModalHeader>
         {children}
+        <ModalFooter>
+          <button onClick={onConfirm}>확인</button>
+          <button onClick={onClose}>취소</button>
+        </ModalFooter>
       </ModalContent>
     </ModalContainer>
   )
@@ -58,5 +64,11 @@ const ModalHeader = styled.div`
     top: 1rem;
     right: 1rem;
   }
+`
+
+const ModalFooter = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
 `
 export default BaseModal

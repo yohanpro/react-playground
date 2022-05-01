@@ -1,11 +1,13 @@
-import Entity from './AlbumEntity.styles'
+import { Entity, AlbumDescriptons } from './AlbumEntity.styles'
 import { AlbumEntityPropType } from './AlbumEntity.propType'
 import BaseModal from '@components/common/Modal'
 import { useState } from 'react'
 
 const AlbumEntity = (props: AlbumEntityPropType) => {
-  const { name, id } = props
+  const { name, id, description } = props
   const [isEditModalOpen, setIsEditModalOpen] = useState(false)
+  const [discriptions, setDescriptions] = useState(description)
+
   const handleEdit = () => {
     console.log('edit', id)
     setIsEditModalOpen(true)
@@ -14,7 +16,13 @@ const AlbumEntity = (props: AlbumEntityPropType) => {
     console.log('delete')
   }
 
-  const handleClose = () => {}
+  const handleClose = () => {
+    setIsEditModalOpen((isEditModalOpen) => !isEditModalOpen)
+  }
+  const handleEditConfirm = () => {
+    setIsEditModalOpen(false)
+  }
+
   return (
     <>
       <Entity role="button" {...props}>
@@ -26,12 +34,18 @@ const AlbumEntity = (props: AlbumEntityPropType) => {
       </Entity>
       <BaseModal
         isOpen={isEditModalOpen}
-        title="수정하기"
-        onClose={() =>
-          setIsEditModalOpen((isEditModalOpen) => !isEditModalOpen)
-        }
+        title={name}
+        onClose={handleClose}
+        onConfirm={handleEditConfirm}
       >
-        <div></div>
+        <AlbumDescriptons>
+          <textarea
+            name=""
+            id=""
+            value={discriptions}
+            onChange={(e) => setDescriptions(e.target.value)}
+          />
+        </AlbumDescriptons>
       </BaseModal>
     </>
   )

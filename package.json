@@ -6,7 +6,7 @@
     "start": "lerna run start --stream",
     "tsc": "lerna run tsc --stream",
     "watch": "lerna run watch --stream",
-    "dev:blog": "lerna exec --scope=blog npm run start",
+    "dev:todo": "lerna exec --scope=todo npm run dev",
     "dev:notion": "lerna exec --scope=notion npm run start"
   },
   "devDependencies": {

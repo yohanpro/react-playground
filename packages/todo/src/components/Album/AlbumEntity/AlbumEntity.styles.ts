@@ -24,14 +24,21 @@ const Entity = styled.div`
     transform: scale(1.01);
     border: 1px solid pink;
   }
-
   & > .button-container {
     position: absolute;
     right: 1%;
     top: 2%;
     display: flex;
-
   }
 `
 
-export default Entity
+const AlbumDescriptons = styled.div`
+  width: 100%;
+  height: 100px;
+
+  textarea {
+    width: 100%;
+    height: 100%;
+  }
+`
+export { Entity, AlbumDescriptons }
