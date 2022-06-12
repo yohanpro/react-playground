@@ -27,6 +27,9 @@ export default function Posts() {
     <main>
       <h1>Posts</h1>
       <ul>
+        <Link to="admin" className="text-red-600 underline">
+          Admin
+        </Link>
         {posts.map((post) => (
           <li key={post.slug}>
             <Link to={post.slug} className="text-blue-600 underline">
