@@ -1,3 +1,12 @@
+model Post {
+  slug     String @id
+  title    String
+  markdown String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
