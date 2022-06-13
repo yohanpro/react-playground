@@ -10,7 +10,7 @@ export const loader = async () => {
   return json<LoaderData>({
     posts: [
       {
-        slug: "my-first-posdt",
+        slug: "my-first-post",
         title: "My First Post",
       },
       {
